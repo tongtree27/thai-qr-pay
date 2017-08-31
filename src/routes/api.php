@@ -183,6 +183,7 @@ $this->get('/prompt-pay', function (Request $request, Response $response, array 
             ];
 
             return $response->withJson($result);
+            break;
         }
         default : {
             return $response->withRedirect($url);
