@@ -38,12 +38,6 @@ $this->get('[/]', function (Request $request, Response $response, array $args) {
                         'description' => 'Prompt Pay = A000000677010111',
                         'require' => false,
                         'default' => 'A000000677010111',
-                        'subData' => [
-                            'require' => true,
-                            'id' => '00',
-                            'length' => '16',
-                            'name' => 'maidata'
-                        ]
                     ]
                 ],
                 'maidata' => [
