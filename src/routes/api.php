@@ -44,7 +44,7 @@ $this->get('[/]', function (Request $request, Response $response, array $args) {
                     'description' => 'Merchant Account Information data must be phone or Prompt Pay ID',
                     'name' => 'maidata',
                     'id' => '00',
-                    'length' => '16',
+                    'length' => '13',
                     'data' => [
                         'require' => true,
                     ]
