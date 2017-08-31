@@ -122,7 +122,8 @@ $this->get('/prompt-pay', function (Request $request, Response $response, array 
         $maiData = '66' . substr($maiData, 1);
     } else {
         $appType = '02';
-        $appLen = 15;
+//        $appLen = 15;
+        $appLen = 13;
     }
     // Leading data with zero
     $appLen = str_pad($appLen, 2, 0, STR_PAD_LEFT);
