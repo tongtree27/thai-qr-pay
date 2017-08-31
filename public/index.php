@@ -7,7 +7,7 @@ if (extension_loaded('memcached')) {
     ini_set('session.lazy_write', 0);
 }
 date_default_timezone_set('Asia/Bangkok');
-$_SERVER['DOCUMENT_ROOT'] = '/srv/cloud-mnt';
+$_SERVER['DOCUMENT_ROOT'] = '/srv/thai-qr-pay';
 
 require $_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php';
 
