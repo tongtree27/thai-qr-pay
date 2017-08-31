@@ -15,7 +15,7 @@ $this->get('[/]', function (Request $request, Response $response, array $args) {
             'path' => 'prompt-pay',
             'args' => [
                 'responsetype' => [
-                    'default' => 'json',
+                    'default' => 'redirect',
                     'data' => [
                         'json',
                         'redirect'
@@ -178,19 +178,20 @@ $this->get('/prompt-pay[/]', function (Request $request, Response $response, arr
     // Use google API to generate QR code ^_^
     $url = 'https://chart.googleapis.com/chart?cht=qr&chs=256x256&chld=M|0&chl=' . $data;
 
-    $responseType = $request->getParsedBodyParam('responsetype', 'json');
+    $responseType = $request->getParsedBodyParam('responsetype', 'redirect');
 
     switch ($responseType) {
-        case 'redirect' : {
-            return $response->withRedirect($url);
-        }
-        default : {
+        case 'json' : {
             $result = [
                 'result' => true,
-                'data' => $url
+                'data' => $data,
+                'url' => $url
             ];
 
             return $response->withJson($result);
+        }
+        default : {
+            return $response->withRedirect($url);
         }
     }
 
