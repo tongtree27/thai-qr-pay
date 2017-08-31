@@ -7,7 +7,7 @@ use \Slim\Http\Response;
 
 $this->get('[/]', function (Request $request, Response $response, array $args) {
     $result = [
-        'result' => 'success',
+        'result' => false,
         'message' => 'How to use',
         'url' => 'https://' . $_SERVER['SERVER_NAME'] . '/api/{path}?{args}',
         'method' => 'GET',
