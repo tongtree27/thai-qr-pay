@@ -97,7 +97,7 @@ $this->get('/prompt-pay', function (Request $request, Response $response, array 
 
     if (empty($request->getQueryParam('maidata'))) {
 
-        return $response->withRedirect('/qr');
+        return $response->withRedirect('/api');
     }
 
     /** EMVCo QR Specification
