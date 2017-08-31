@@ -17,6 +17,7 @@ $this->get('[/]', function (Request $request, Response $response, array $args) {
                 'responsetype' => [
                     'default' => 'redirect',
                     'data' => [
+                        'require' => false,
                         'json',
                         'redirect'
                     ]
