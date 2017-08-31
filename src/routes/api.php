@@ -9,7 +9,7 @@ $this->get('[/]', function (Request $request, Response $response, array $args) {
     $result = [
         'result' => 'success',
         'message' => 'How to use',
-        'url' => 'https://' . $_SERVER['SERVER_NAME'] . '/qr/{path}?{args}',
+        'url' => 'https://' . $_SERVER['SERVER_NAME'] . '/api/{path}?{args}',
         'method' => 'GET',
         'promptPay' => [
             'path' => 'prompt-pay',
@@ -98,7 +98,7 @@ $this->get('[/]', function (Request $request, Response $response, array $args) {
 
 });
 
-$this->get('/prompt-pay[/]', function (Request $request, Response $response, array $args) {
+$this->get('/prompt-pay', function (Request $request, Response $response, array $args) {
     require_once $_SERVER['DOCUMENT_ROOT'] . '/controllers/Utilities.php';
 
     if (empty($request->getQueryParam('maidata'))) {

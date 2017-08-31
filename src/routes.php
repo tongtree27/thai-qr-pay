@@ -10,9 +10,9 @@ $pathArray = explode('/', $path);
 
 // split route by path
 switch ($pathArray[1]) {
-    case 'qr' : {
-        $app->group('/user', function () use ($container) {
-            require_once $_SERVER['DOCUMENT_ROOT'] . '/src/routes/qr.php';
+    case 'api' : {
+        $app->group('/api', function () use ($container) {
+            require_once $_SERVER['DOCUMENT_ROOT'] . '/src/routes/api.php';
         });
         break;
     }
