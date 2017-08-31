@@ -19,8 +19,7 @@ switch ($pathArray[1]) {
     default : {
 
         $app->get('[/]', function (Request $request, Response $response, $args) {
-            phpinfo();
-            exit(0);
+            return $response->withStatus(204);
         });
 
         break;
