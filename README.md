@@ -1,7 +1,8 @@
 # Thailand dynamic QR code payment generate with PHP Slim Framework
 
 Example
-    https://qr.zercle.org/api/prompt-pay?maidata={PromptPayID}&amount={Amount in full THB}
+
+    https://qr.zercle.org/api/prompt-pay?maidata={PromptPayID}&amount={AmountInFullTHB}
 
 Use this skeleton application to quickly setup and start working on a new Slim Framework 3 application. This application uses the latest Slim 3 with the PHP-View template renderer. It also uses the Monolog logger.
 
