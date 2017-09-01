@@ -19,7 +19,7 @@ switch ($pathArray[1]) {
     default : {
 
         $app->get('[/]', function (Request $request, Response $response, $args) {
-            return $response->withStatus(204);
+            return $this->renderer->render($response, 'index.phtml', $args);
         });
 
         break;
